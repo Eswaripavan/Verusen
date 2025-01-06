@@ -1,4 +1,5 @@
 # Databricks notebook source
+from pyspark.dbutils import DBUtils
 dbutils.widgets.text("brewdat_library_version", "v0.7.0", "01 - brewdat_library_version")
 brewdat_library_version = dbutils.widgets.get("brewdat_library_version")
 print(f"{brewdat_library_version = }")
@@ -209,4 +210,3 @@ dbutils.fs.ls(f"abfss://raw@brewdateuroperawbrzd.dfs.core.windows.net/data/europ
 dbutils.fs.ls(f"abfss://raw@brewdateuroperawbrzd.dfs.core.windows.net/data/europe/tech/sap_ecc_ero/attunity/file.afpo__ct/")
 
 # COMMAND ----------
-
